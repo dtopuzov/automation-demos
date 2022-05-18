@@ -30,6 +30,13 @@ export class DriverManager {
     private getChromeDriver(): ThenableWebDriver {
         const options = new ChromeOptions();
         options.addArguments(`--window-size=${Settings.browserWidth},${Settings.browserHeight}`);
+        options.addArguments('--force-device-scale-factor=1');
+        options.addArguments('--no-sandbox');
+        options.addArguments('--disable-gpu');
+        options.addArguments('--no-first-run');
+        options.addArguments('--disable-extensions');
+        options.addArguments('--disable-notifications');
+        options.addArguments('--ignore-certificate-errors');
         if (Settings.headless) {
             options.headless();
         }
@@ -39,6 +46,13 @@ export class DriverManager {
     private getEdgeDriver(): ThenableWebDriver {
         const options = new EdgeOptions();
         options.addArguments(`--window-size=${Settings.browserWidth},${Settings.browserHeight}`);
+        options.addArguments('--force-device-scale-factor=1');
+        options.addArguments('--no-sandbox');
+        options.addArguments('--disable-gpu');
+        options.addArguments('--no-first-run');
+        options.addArguments('--disable-extensions');
+        options.addArguments('--disable-notifications');
+        options.addArguments('--ignore-certificate-errors');
         if (Settings.headless) {
             options.headless();
         }

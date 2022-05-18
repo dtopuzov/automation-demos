@@ -17,17 +17,20 @@ afterAll(async () => {
 
 test('should login with valid credentials', async () => {
     await login(browser, 'tomsmith', 'SuperSecretPassword!')
-    expect(await getAlertText(browser)).toEqual('You logged into a secure area!');
+    const message = await getAlertText(browser);
+    expect(message).toContain('You logged into a secure area!');
 });
 
 test('should login with invalid username', async () => {
     await login(browser, 'wrongUsername', 'SuperSecretPassword!')
-    expect(await getAlertText(browser)).toEqual('Your username is invalid!');
+    const message = await getAlertText(browser);
+    expect(message).toContain('Your username is invalid!');
 });
 
 test('should login with invalid password', async () => {
     await login(browser, 'tomsmith', 'wrongPassword')
-    expect(await getAlertText(browser)).toEqual('Your password is invalid!');
+    const message = await getAlertText(browser);
+    expect(message).toContain('Your password is invalid!');
 });
 
 async function login(browser: Browser, username: string, password: string): Promise<void> {
