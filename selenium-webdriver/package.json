@@ -1,0 +1,18 @@
+{
+  "name": "selenium-demos",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "export BASE_URL=https://the-internet.herokuapp.com/ && jest",
+    "test:local": "export BASE_URL=https://the-internet.herokuapp.com/ && jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "@types/selenium-webdriver": "^4.1.0",
+    "jest": "^28.1.0",
+    "selenium-webdriver": "^4.1.2",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}
