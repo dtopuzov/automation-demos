@@ -12,7 +12,7 @@ WebdriverIO demos against `https://the-internet.herokuapp.com` app.
 
 ## Prerequisites
 
-- [Node 14](https://nodejs.org/en/download/) or above
+- [Node 16](https://nodejs.org/en/download/) or above
 
 ## Setup Drivers
 
