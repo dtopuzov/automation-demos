@@ -11,7 +11,7 @@ WebdriverIO demos against `https://the-internet.herokuapp.com` app.
 
 ## Prerequisites
 
-- [Node 14](https://nodejs.org/en/download/) or above
+- [Node 16](https://nodejs.org/en/download/) or above
 
 ## Setup Drivers
 
@@ -40,8 +40,9 @@ npm run test
 Run against locally hosted version of the internet app.
 
 ```bash
-export HEADLESS=true
 docker run -d -p 8080:5000 gprestes/the-internet
+
+export HEADLESS=true
 export BASE_URL=http://localhost:8080/
 npm run test
 ```

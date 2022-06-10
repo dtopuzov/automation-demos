@@ -16,7 +16,7 @@
         "yargs": "^17.5.1"
     },
     "scripts": {
-        "test": "wdio run test/wdio.conf.js",
-        "test:local": "wdio run test/wdio.conf.js --url http://localhost:8080/"
+        "test": "wdio run test/wdio.conf.js --headless",
+        "test:local": "wdio run test/wdio.conf.js --headless --url http://localhost:8080/"
     }
 }

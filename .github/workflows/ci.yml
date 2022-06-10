@@ -1,0 +1,70 @@
+on:
+  push
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          
+      - name: Setup The Internet App
+        run: docker run -d -p 8080:5000 gprestes/the-internet
+        
+      - name: Run Tests
+        run: |
+          cd playwright
+          npm ci
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+       
+  selenium-webdriver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          
+      - name: Setup The Internet App
+        run: docker run -d -p 8080:5000 gprestes/the-internet
+        
+      - name: Run Tests
+        run: |
+          cd selenium-webdriver
+          npm ci
+          npm run test
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+          HEADLESS: true
+          BASE_URL: http://localhost:8080/
+          
+  webdriverio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          
+      - name: Setup The Internet App
+        run: docker run -d -p 8080:5000 gprestes/the-internet
+        
+      - name: Run Tests
+        run: |
+          cd webdriverio
+          npm ci
+          npm run test:local
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
