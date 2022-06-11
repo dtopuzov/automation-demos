@@ -20,8 +20,8 @@ jobs:
         run: |
           cd playwright
           npm ci
-        env:
-          CHROME_BIN: /usr/bin/google-chrome
+          npm run bootstrap
+          npm run test
        
   selenium-webdriver:
     runs-on: ubuntu-latest
