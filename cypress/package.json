@@ -1,16 +1,16 @@
 {
-  "name": "playwright",
+  "name": "cypress",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "npx playwright install",
-    "test": "npx playwright test"
+    "open": "npx cypress open",
+    "test": "npx cypress run"
   },
   "keywords": [],
   "author": "dtopuzov",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.23.0"
+    "cypress": "^10.3.0"
   }
 }
