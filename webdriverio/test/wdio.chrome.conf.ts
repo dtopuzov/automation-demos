@@ -36,14 +36,10 @@ exports.config = {
             args: [config.headless ? '--headless' : '--no-headless',
                 '--disable-dev-shm-usage',
                 '--force-device-scale-factor=1',
-                '--no-sandbox',
-                '--disable-gpu',
                 '--window-size=1366,768',
-                '--no-first-run',
                 '--disable-extensions',
                 '--disable-notifications',
-                '--ignore-certificate-errors',
-                '--disable-notifications'
+                '--ignore-certificate-errors'
             ],
         },
     }]

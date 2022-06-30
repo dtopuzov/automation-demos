@@ -31,9 +31,6 @@ export class DriverManager {
         const options = new ChromeOptions();
         options.addArguments(`--window-size=${Settings.browserWidth},${Settings.browserHeight}`);
         options.addArguments('--force-device-scale-factor=1');
-        options.addArguments('--no-sandbox');
-        options.addArguments('--disable-gpu');
-        options.addArguments('--no-first-run');
         options.addArguments('--disable-extensions');
         options.addArguments('--disable-notifications');
         options.addArguments('--ignore-certificate-errors');
@@ -47,9 +44,6 @@ export class DriverManager {
         const options = new EdgeOptions();
         options.addArguments(`--window-size=${Settings.browserWidth},${Settings.browserHeight}`);
         options.addArguments('--force-device-scale-factor=1');
-        options.addArguments('--no-sandbox');
-        options.addArguments('--disable-gpu');
-        options.addArguments('--no-first-run');
         options.addArguments('--disable-extensions');
         options.addArguments('--disable-notifications');
         options.addArguments('--ignore-certificate-errors');
