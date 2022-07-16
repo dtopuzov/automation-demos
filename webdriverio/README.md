@@ -8,7 +8,6 @@ WebdriverIO demos against `https://the-internet.herokuapp.com` app.
 - [TypeScript](https://webdriver.io/docs/typescript.html) to get autocompletion and type safety.
 - [Junit Reporter](https://webdriver.io/docs/junit-reporter.html) to generate results that can be parsed by Jenkins.
 - [Yargs](https://yargs.js.org/) to easily parse commandline params.
-- [ESLint](https://github.com/eslint/eslint) to enforce code consistency.
 
 ## Prerequisites
 
